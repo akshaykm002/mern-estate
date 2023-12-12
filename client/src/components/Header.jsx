@@ -1,31 +1,50 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
-   <>
-   <header>
-    <div className='flex justify-between'>
-    <h1 className='font-bold text-xl sm:text-xl flex flex-wrap  '>
-        <span className='text-slate-500 '>Global</span>
-        <span className='text-slate-700 pl-3'>Estates</span>
-    </h1>
-    <form className='bg-slate-100 p-3 rounded-lg flex items-center'>
-        <input type="text"
-        placeholder='Search...' 
-        className='bg-transparent focus:outline-none w-24 sm:w-64'/>
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </form>
-   <ul className='flex gap-4'>
-    <li>Home</li>
-    <li>About</li>
-    <li>SignIn</li>
-   </ul>
+    <>
+      <header className="bg-slate-200 shadow-md px-8 py-2">
+        <div className="flex justify-between ">
+          <Link to="/">
+            <h1 className="font-bold text-xl sm:text-xl flex flex-wrap  cursor-pointer pt-3">
+              <span className="text-slate-500 ">Global</span>
+              <span className="text-slate-700 pl-2">Estates</span>
+            </h1>
+          </Link>
 
-    </div>
-   
-   </header>
-   </>
-  )
+          <form className="bg-slate-100 p-3 rounded-lg flex items-center">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="bg-transparent focus:outline-none w-24 sm:w-64"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </form>
+
+          <ul className="flex gap-4 align-items-center">
+            <Link to="/">
+              <li className="hidden sm:inline text-slate-700 hover:underline cursor-pointer">
+                Home
+              </li>
+            </Link>
+            <Link to="/about">
+              <li className="hidden sm:inline text-slate-700 hover:underline cursor-pointer">
+                About
+              </li>
+            </Link>
+            <Link to='/sign-in'>
+            <li className="text-slate-700 hover:underline cursor-pointer">
+              SignIn
+            </li>
+            
+            </Link>
+          
+          </ul>
+        </div>
+      </header>
+    </>
+  );
 }
 
-export default Header
+export default Header;

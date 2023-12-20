@@ -37,7 +37,8 @@ function Header() {
             </Link>
             <Link to='/profile'>
               {
-                currentUser?(<img src =""alt="PROFILE"/>):
+                currentUser?(        <div className='mt-2 text-center text-teal-950 text-xl font-bold flex justify-center mb-2'  >{currentUser.username}</div>
+                ):
                 ( <li className="text-slate-700 hover:underline cursor-pointer">
                 SignIn
               </li>)

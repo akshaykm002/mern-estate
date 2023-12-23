@@ -7,7 +7,7 @@ export default function Profile() {
     <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form className='flex flex-col gap-4'>
-        <div className='mt-2 text-center text-blue-950 text-3xl font-bold'  >Welcome {currentUser.username}</div>
+        <img src={currentUser.avatar} alt={currentUser.username} className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2' />
         <input type="text" placeholder='username' id='username' className='border p-3 rounded-lg'  />
         <input type="email" placeholder='email' id='email' className='border p-3 rounded-lg'  />
         <input type="text" placeholder='password' id='password' className='border p-3 rounded-lg'  />

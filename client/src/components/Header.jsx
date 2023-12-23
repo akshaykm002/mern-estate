@@ -36,14 +36,11 @@ function Header() {
               </li>
             </Link>
             <Link to='/profile'>
-              {
-                currentUser?(        <div className='mt-2 text-center text-teal-950 text-xl font-bold flex justify-center mb-2'  >{currentUser.username}</div>
-                ):
-                ( <li className="text-slate-700 hover:underline cursor-pointer">
-                SignIn
-              </li>)
-              }
-           
+            {currentUser ? (
+              <img className='rounded-full h-7 w-7 object-cover' src={currentUser.avatar} alt='profile' />
+            ) : (
+              <li className=' text-slate-700 hover:underline'> Sign in</li>
+            )}
             
             </Link>
           

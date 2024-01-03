@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import '../components/header.css'
 
 function Header() {
   const { currentUser } = useSelector((state) => state.user);
@@ -23,7 +24,8 @@ function Header() {
   }, [location.search]);
   return (
     <>
-      <header className="bg-slate-200 shadow-md px-8 py-2">
+     
+      <header className="header1 bg-slate-200 shadow-md px-8 py-2 sticky">
         <div className="flex justify-between ">
           <Link to="/">
             <h1 className="font-bold text-xl sm:text-xl flex flex-wrap  cursor-pointer pt-3">
@@ -73,6 +75,7 @@ function Header() {
           </ul>
         </div>
       </header>
+
     </>
   );
 }
